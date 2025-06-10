@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=0,1 \
+python -m torch.distributed.run --nproc_per_node=2 --master_addr 127.0.0.8 --master_port 29507 train_video_retrieval.py --config configs/retrieval_didemo_ToMe_2x_no_flatten.yaml --output_dir ./output/video_retrieval_didemo/speed_test --speed_test 

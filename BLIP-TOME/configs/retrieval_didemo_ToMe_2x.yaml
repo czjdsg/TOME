@@ -1,0 +1,54 @@
+video_root: '/mnt/main/zjcai/LocalizingMoments-master/videos'
+ann_root: '/mnt/main/zjcai/LocalizingMoments-master/data'
+dataset: 'retrieval_didemo'
+
+# set pretrained as a file path or an url
+pretrained: '/mnt/main/zjcai/BLIP-ToMe/pretrained/model_base.pth'
+
+max_words: 64
+
+# vit video encoder
+vit: 'base'
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+
+batch_size_train: 2
+batch_size_test: 16
+init_lr: 1e-5
+
+num_frames: 48
+num_frm_train: 48
+num_frm_test: 48
+
+
+image_size: 224
+queue_size: 57600
+alpha: 0.4
+k_test: 128
+negative_all_rank: True
+
+# optimizer
+weight_decay: 0.05
+min_lr: 0
+max_epoch: 10
+
+#ToMe 
+token_merging: True
+trace_source: False
+tome_r: [48, 16, 16, 16, 16, 16, 8, 8, 8, 8, 8, 8]
+tome_prop_attn: True
+tome_type: 'soft_s_multi_cls'
+tome_min_token: 1
+tome_hierarchy: True
+tome_token_importance: False
+tome_importance_alpha: 6.0
+frame_flatten_type: "keep"
+tome_average_type: "AVG"
+frame_flatten_layer: [4]
+frame_mask: False
+attn_frame_mask_layer: []
+merge_frame_mask_layer: []
+binary_frame_mask: False
+flatten_layer_merge_type: ["T"]
+enable_frame_pos_embed: False
+

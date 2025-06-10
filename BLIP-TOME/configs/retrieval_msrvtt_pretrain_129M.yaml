@@ -1,0 +1,35 @@
+video_root: '/data5/wancong/zhiyin/msrvtt/MSRVTT_Videos_Compression'
+train_split_root: '/data5/wancong/zhiyin/msrvtt/MSRVTT_train.9k.csv'
+test_split_root: '/data5/wancong/zhiyin/msrvtt/MSRVTT_JSFUSION_test.csv'
+data_root: '/data5/wancong/zhiyin/msrvtt/MSRVTT_data.json'
+dataset: 'retrieval_msrvtt'
+
+# set pretrained as a file path or an url
+pretrained: '/data5/wancong/zhiyin/BLIP-ToMe/pretrained/model_base.pth'
+
+max_words: 32
+
+# vit video encoder
+vit: 'base'
+vit_grad_ckpt: True
+vit_ckpt_layer: 4
+
+batch_size_train: 16
+batch_size_test: 32
+init_lr: 1e-5
+
+num_frames: 12
+num_frm_train: 12
+num_frm_test: 12
+
+image_size: 224
+queue_size: 57600
+alpha: 0.4
+k_test: 128
+negative_all_rank: True
+
+# optimizer
+weight_decay: 0.05
+min_lr: 0
+max_epoch: 10
+
