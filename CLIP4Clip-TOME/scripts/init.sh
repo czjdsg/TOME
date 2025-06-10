@@ -1,0 +1,1 @@
+pip install --user boto3 decord ffmpeg timm
